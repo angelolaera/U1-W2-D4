@@ -2,7 +2,16 @@
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+//Qui stiamo definendo la funzione area che riceve come parametri b e h
+function area(b, h) {
+  //qui stiamo decidendo cosa deve venir fuori dalla funzione
+  return b * h;
+}
+const base = 11;
+const altezza = 12;
+//dopo aver definito le due costanti base e altezza, nella variabile risultato applichiamo la funzione area che andrà a moltiplicare i due valori
+const risultato = area(base, altezza);
+console.log(risultato);
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -10,21 +19,57 @@
  la loro somma moltiplicata per tre.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazySum(num1, num2) {
+  if (num1 === num2) {
+    const moltiplicapertre = (num1 + num2) * 3;
+    return moltiplicapertre;
+  } else {
+    const somma = num1 + num2;
+    return somma;
+  }
+}
+const x = 3;
+const y = 4;
+const risultato2 = crazySum(x, y);
+console.log("Il risultato è: ", risultato2);
 
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(numero1) {
+  let differenzassoluta = Math.abs(numero1 - 19);
+  if (numero1 > 19) {
+    const moltiplicapertre2 = differenzassoluta * 3;
+    return moltiplicapertre2;
+  } else {
+    return differenzassoluta;
+  }
+}
+
+const x1 = 5;
+const risultato3 = crazyDiff(x1);
+console.log("La differenza assoluta è: ", risultato3);
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function boundary(n) {
+  if (n >= 20 && n <= 100) {
+    return true;
+  } else if (n === 400) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const n2 = 400;
+const risultato4 = boundary(n2);
+console.log("Il risultato è ", risultato4);
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -32,7 +77,17 @@
  ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function epify(stringa) {
+  if (stringa.startsWith("EPICODE")) {
+    return console.log("La stringa inizia con EPICODE quindi resta invariata", stringa);
+  } else {
+    stringa = "EPICODE " + stringa;
+    return stringa;
+  }
+}
+let parola = " che bella scuola!";
+let risultato5 = epify(parola);
+console.log("Ecco la stringa: ", risultato5);
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
