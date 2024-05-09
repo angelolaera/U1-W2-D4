@@ -48,9 +48,7 @@ function crazyDiff(numero1) {
   }
 }
 
-const x1 = 5;
-const risultato3 = crazyDiff(x1);
-console.log("La differenza assoluta è: ", risultato3);
+console.log(crazyDiff(30));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -67,9 +65,7 @@ function boundary(n) {
   }
 }
 
-const n2 = 400;
-const risultato4 = boundary(n2);
-console.log("Il risultato è ", risultato4);
+console.log(boundary(100));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -79,22 +75,27 @@ console.log("Il risultato è ", risultato4);
 
 function epify(stringa) {
   if (stringa.startsWith("EPICODE")) {
-    return console.log("La stringa inizia con EPICODE quindi resta invariata", stringa);
-  } else {
-    stringa = "EPICODE " + stringa;
     return stringa;
+  } else {
+    return "EPICODE " + stringa;
   }
 }
-let parola = " che bella scuola!";
-let risultato5 = epify(parola);
-console.log("Ecco la stringa: ", risultato5);
+console.log(epify("CIAO COME STAI?"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(numero) {
+  if (numero % 3 === 0 || numero % 7 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(check3and7(3));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
